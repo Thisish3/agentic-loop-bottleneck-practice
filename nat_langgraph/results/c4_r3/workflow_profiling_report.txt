@@ -1,0 +1,465 @@
+
+
+
+=== Multi-Example Nested Call Profiling Report ===
+Total calls (across all examples): 316
+
+-- Concurrency Distribution (all examples) --
+p50=24.0, p90=24.0, p95=24.0, p99=24.0
+
+-- Top 5 Calls by Bottleneck Score (subtree_time) --
+1) UUID=89aa3e91-7c5f-4051-a029-fb530e5a8db6, FUNCTION 'langgraph_wrapper', dur=7.21, self_time=0.00, subtree_time=13.31, concurrency=24.0, score=13.31
+2) UUID=01a13ff4-f379-7e41-9682-a3520cc7aec8, FUNCTION 'langgraph_wrapper', dur=7.21, self_time=6.10, subtree_time=13.31, concurrency=24.0, score=13.31
+3) UUID=89a56dd2-7c3d-408b-ae81-7eae45711021, FUNCTION 'langgraph_wrapper', dur=4.48, self_time=0.00, subtree_time=7.97, concurrency=24.0, score=7.97
+4) UUID=01a13ff4-f3ba-7350-82ad-3d898d0e1ffb, FUNCTION 'langgraph_wrapper', dur=4.48, self_time=3.49, subtree_time=7.97, concurrency=24.0, score=7.97
+5) UUID=a728b0f1-befa-42ee-9e8c-df69c11b133c, FUNCTION 'langgraph_wrapper', dur=6.32, self_time=0.00, subtree_time=6.32, concurrency=24.0, score=6.32
+
+-- Full Tree(s) (All Examples) --
+- FUNCTION 'langgraph_wrapper' (uuid=d58a37cf-749b-49ab-9ac0-8a11f64aee1e, start=1792074376.51, end=1792074378.62, dur=2.10)
+  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e542-7d42-aaf3-5aabe1e233e8, start=1792074376.51, end=1792074378.62, dur=2.10)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e543-7bb0-a813-40d4a133c660, start=1792074376.52, end=1792074377.97, dur=1.46)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e547-7373-8aac-9ef84a2f1db7, start=1792074376.52, end=1792074377.97, dur=1.45)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e548-7bf2-ae66-80ecd54f5a82, start=1792074376.52, end=1792074377.97, dur=1.45)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e549-7261-a952-7ab2324a40e5, start=1792074376.52, end=1792074376.52, dur=0.00)
+          - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-e54e-7481-b254-02bd56fe3e8a, start=1792074376.53, end=1792074377.97, dur=1.45)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-eaf4-7361-b361-bc0ac255654d, start=1792074377.97, end=1792074377.97, dur=0.00)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-eaf6-7121-96bd-01833022d03d, start=1792074377.97, end=1792074377.98, dur=0.01)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-eaf6-7121-96bd-019d57024eb3, start=1792074377.98, end=1792074377.98, dur=0.01)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-eaf7-70a2-81fc-56a368927d64, start=1792074377.98, end=1792074377.98, dur=0.00)
+          - TOOL 'get_model_params' (uuid=01a13ff4-eaf8-7732-a822-8f79228a10f2, start=1792074377.98, end=1792074377.98, dur=0.00)
+            - TOOL 'calculator' (uuid=01a13ff4-eaf8-7732-a822-8f9bc0cb13e8, start=1792074377.98, end=1792074377.98, dur=0.00)
+            - TOOL 'get_chip_spec' (uuid=01a13ff4-eaf8-7732-a822-8f8b99a941cf, start=1792074377.98, end=1792074377.98, dur=0.00)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-eafe-7590-92dc-0cac04d4dc2a, start=1792074377.98, end=1792074378.62, dur=0.63)
+            - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-eafe-7590-92dc-0cb321b73b65, start=1792074377.98, end=1792074378.62, dur=0.63)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-eb00-7622-bf9b-65973a433fad, start=1792074377.98, end=1792074378.61, dur=0.63)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-eb00-7622-bf9b-65a9b7035a51, start=1792074377.98, end=1792074377.99, dur=0.00)
+                - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-eb02-7093-8689-b66ce7d94fc0, start=1792074377.99, end=1792074378.61, dur=0.63)
+            - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ed77-7461-b94d-76f6af853316, start=1792074378.62, end=1792074378.62, dur=0.00)
+- FUNCTION 'langgraph_wrapper' (uuid=90de4cf5-7768-4a54-bf11-e531c8161c25, start=1792074376.52, end=1792074378.19, dur=1.68)
+  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e544-75b1-bc93-7cc6ea615cd8, start=1792074376.52, end=1792074378.19, dur=1.68)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e545-7a01-a82e-3e5e0849f2e7, start=1792074376.52, end=1792074377.72, dur=1.20)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e547-7373-8aac-9f0ee2e8cb2a, start=1792074376.52, end=1792074377.72, dur=1.20)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e548-7bf2-ae66-80fe608d86b9, start=1792074376.52, end=1792074377.72, dur=1.20)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e54b-7810-9eb5-b4ff4e60156b, start=1792074376.52, end=1792074376.52, dur=0.00)
+          - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-e54f-7092-aeef-94c7cb6bca90, start=1792074376.53, end=1792074377.72, dur=1.19)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e9f5-7983-a82d-e21d29e6507a, start=1792074377.72, end=1792074377.72, dur=0.00)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e9f6-7240-92d6-073700aacb59, start=1792074377.72, end=1792074377.73, dur=0.01)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e9f7-7951-8faa-4fee56ba1c7f, start=1792074377.72, end=1792074377.73, dur=0.01)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e9f7-7951-8faa-4ff4fa844e77, start=1792074377.72, end=1792074377.73, dur=0.01)
+          - TOOL 'get_chip_spec' (uuid=01a13ff4-e9f8-7f30-a1b0-e905a5e2c677, start=1792074377.72, end=1792074377.72, dur=0.00)
+            - TOOL 'get_model_params' (uuid=01a13ff4-e9f8-7f30-a1b0-e8fadcb24831, start=1792074377.72, end=1792074377.73, dur=0.00)
+              - TOOL 'calculator' (uuid=01a13ff4-e9f9-73b3-b3bd-0c02fa1c120f, start=1792074377.72, end=1792074377.72, dur=0.00)
+            - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e9ff-7302-bf83-be0b1e810abc, start=1792074377.73, end=1792074378.19, dur=0.47)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea00-7f32-9e8b-6b798ac7f31a, start=1792074377.73, end=1792074378.19, dur=0.46)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea01-7811-a3b5-a0319535f006, start=1792074377.73, end=1792074378.19, dur=0.46)
+                  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea01-7811-a3b5-a04d3a4b8076, start=1792074377.73, end=1792074377.73, dur=0.00)
+                  - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-ea03-7c33-80a7-8e1aed4ff8fd, start=1792074377.73, end=1792074378.19, dur=0.46)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ebd0-76d1-a388-9c5d4a074167, start=1792074378.19, end=1792074378.19, dur=0.00)
+- FUNCTION 'langgraph_wrapper' (uuid=002dcd9a-dd8e-4046-bf93-5b99f0836c2a, start=1792074376.52, end=1792074378.30, dur=1.79)
+  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e545-7a01-a82e-3e6bfb6adc5a, start=1792074376.52, end=1792074378.30, dur=1.79)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e546-7da2-8416-bde8f51d8512, start=1792074376.52, end=1792074377.77, dur=1.25)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e548-7bf2-ae66-80cb2a303167, start=1792074376.52, end=1792074377.77, dur=1.25)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e549-7261-a952-7a9c0b2902ad, start=1792074376.52, end=1792074377.77, dur=1.25)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e54c-77e3-aa30-b5d7477461ab, start=1792074376.52, end=1792074376.53, dur=0.00)
+          - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-e550-7ba0-ac05-1295b79128f3, start=1792074376.53, end=1792074377.77, dur=1.24)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea26-78f3-873e-d674fe694190, start=1792074377.77, end=1792074377.77, dur=0.00)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea28-7e42-be6a-26b28ce01e2b, start=1792074377.77, end=1792074377.78, dur=0.01)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea28-7e42-be6a-26cbbad54f79, start=1792074377.77, end=1792074377.78, dur=0.01)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea28-7e42-be6a-26dbd9b45df6, start=1792074377.77, end=1792074377.78, dur=0.01)
+          - TOOL 'get_chip_spec' (uuid=01a13ff4-ea29-7c31-b314-5d74158409b8, start=1792074377.77, end=1792074377.77, dur=0.00)
+            - TOOL 'calculator' (uuid=01a13ff4-ea2a-7f61-a061-864c8dc005b9, start=1792074377.77, end=1792074377.77, dur=0.00)
+              - TOOL 'get_model_params' (uuid=01a13ff4-ea29-7c31-b314-5d672a7a965d, start=1792074377.77, end=1792074377.77, dur=0.00)
+            - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea31-7930-9cce-3856cd50a767, start=1792074377.78, end=1792074378.30, dur=0.53)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea31-7930-9cce-386e5e5b52ce, start=1792074377.78, end=1792074378.30, dur=0.52)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea32-73a0-825a-a247b7e63748, start=1792074377.78, end=1792074378.30, dur=0.52)
+                  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea33-7f31-9a08-33b9f2f7ac62, start=1792074377.78, end=1792074377.78, dur=0.00)
+                  - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-ea35-7f00-acc6-418d72bf44c6, start=1792074377.78, end=1792074378.30, dur=0.52)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ec3d-7210-9d7b-82ed76270ccb, start=1792074378.30, end=1792074378.30, dur=0.00)
+- FUNCTION 'langgraph_wrapper' (uuid=43ed7895-ae72-40a0-a15a-93d4142f3c7d, start=1792074376.52, end=1792074378.48, dur=1.97)
+  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e546-7da2-8416-bdfc58ddde3e, start=1792074376.52, end=1792074378.48, dur=1.97)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e547-7373-8aac-9ee8038049fe, start=1792074376.52, end=1792074377.85, dur=1.33)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e548-7bf2-ae66-80de9ba6fd96, start=1792074376.52, end=1792074377.85, dur=1.33)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e549-7261-a952-7aa7416ce936, start=1792074376.52, end=1792074377.85, dur=1.33)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-e54d-7761-8777-df276da23d69, start=1792074376.53, end=1792074376.53, dur=0.00)
+          - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-e550-7ba0-ac05-12a44ac9e071, start=1792074376.53, end=1792074377.85, dur=1.32)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea77-7702-88db-6f775be37189, start=1792074377.85, end=1792074377.85, dur=0.00)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea78-7121-aa56-e4ce171a317a, start=1792074377.85, end=1792074377.86, dur=0.01)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea79-7ac2-a8ce-a75e559f8846, start=1792074377.85, end=1792074377.86, dur=0.01)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea79-7ac2-a8ce-a760e229ad6f, start=1792074377.85, end=1792074377.86, dur=0.01)
+          - TOOL 'get_chip_spec' (uuid=01a13ff4-ea7b-7af3-bed1-8463b0e436d5, start=1792074377.85, end=1792074377.85, dur=0.00)
+          - TOOL 'get_model_params' (uuid=01a13ff4-ea7a-7e50-8344-eb160faaffdb, start=1792074377.85, end=1792074377.86, dur=0.00)
+            - TOOL 'calculator' (uuid=01a13ff4-ea7c-7c52-b9ab-d617fd441faf, start=1792074377.86, end=1792074377.86, dur=0.00)
+            - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea82-77c2-b7b2-030258c16618, start=1792074377.86, end=1792074378.48, dur=0.63)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea83-76a0-989a-fa629289e57d, start=1792074377.86, end=1792074378.48, dur=0.62)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea84-7bf3-9157-93d983689daa, start=1792074377.86, end=1792074378.48, dur=0.62)
+                  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ea84-7bf3-9157-93e9979bd48b, start=1792074377.86, end=1792074377.86, dur=0.00)
+                  - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-ea87-7482-8644-7d81c931b1f8, start=1792074377.86, end=1792074378.48, dur=0.62)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ecf3-7c33-b079-f2cc631a537f, start=1792074378.48, end=1792074378.48, dur=0.00)
+- FUNCTION 'langgraph_wrapper' (uuid=3974df3e-0afc-428e-b653-a996c8001579, start=1792074378.20, end=1792074380.22, dur=2.02)
+  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ebd5-7e41-b0df-0a10853e1a06, start=1792074378.20, end=1792074380.22, dur=2.02)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ebd6-7f11-bfe4-2b9ff951fbf2, start=1792074378.20, end=1792074379.50, dur=1.30)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ebd6-7f11-bfe4-2ba7cef0dd1d, start=1792074378.20, end=1792074379.50, dur=1.30)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ebd6-7f11-bfe4-2bb1d3dc5a7c, start=1792074378.20, end=1792074379.50, dur=1.30)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ebd6-7f11-bfe4-2bcf815316f1, start=1792074378.20, end=1792074378.20, dur=0.00)
+          - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-ebd8-7d73-8f59-3c28fff17ff1, start=1792074378.20, end=1792074379.50, dur=1.30)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f0ea-71c3-aa02-b3d156ebf802, start=1792074379.50, end=1792074379.50, dur=0.00)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f0eb-72a1-a5dc-29dc4a5e6030, start=1792074379.50, end=1792074379.50, dur=0.00)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f0eb-72a1-a5dc-29ecf3a24b4f, start=1792074379.50, end=1792074379.51, dur=0.01)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f0ec-7910-9654-6462e61f919a, start=1792074379.50, end=1792074379.51, dur=0.01)
+          - TOOL 'get_model_params' (uuid=01a13ff4-f0ec-7910-9654-647e723def2c, start=1792074379.50, end=1792074379.50, dur=0.00)
+          - TOOL 'calculator' (uuid=01a13ff4-f0ee-71d3-9ed4-c28427135985, start=1792074379.50, end=1792074379.51, dur=0.00)
+            - TOOL 'get_chip_spec' (uuid=01a13ff4-f0ee-71d3-9ed4-c2744fc30527, start=1792074379.50, end=1792074379.50, dur=0.00)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f0f4-78e3-bb54-246aea859d5c, start=1792074379.51, end=1792074380.22, dur=0.71)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f0f4-78e3-bb54-247f7c49dade, start=1792074379.51, end=1792074380.21, dur=0.71)
+            - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f0f5-76e2-9e1a-fcc1365920f2, start=1792074379.51, end=1792074380.21, dur=0.71)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f0f5-76e2-9e1a-fcd16f32baf9, start=1792074379.51, end=1792074379.51, dur=0.00)
+              - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-f0f7-7751-af1f-fe3255b3f9e1, start=1792074379.51, end=1792074380.21, dur=0.70)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f3b7-7f82-94de-47c72076ef8c, start=1792074380.22, end=1792074380.22, dur=0.00)
+- FUNCTION 'langgraph_wrapper' (uuid=b2b475ef-2fc0-4ece-84fb-384ea1792c3e, start=1792074378.30, end=1792074380.17, dur=1.87)
+  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ec41-7420-b004-2d187908e3a9, start=1792074378.31, end=1792074380.17, dur=1.87)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ec42-78b0-acda-6f0850235ffa, start=1792074378.31, end=1792074379.56, dur=1.26)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ec42-78b0-acda-6f1de877ad79, start=1792074378.31, end=1792074379.56, dur=1.26)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ec42-78b0-acda-6f293dfbd667, start=1792074378.31, end=1792074379.56, dur=1.26)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ec43-7b82-8f60-5d8fe181793f, start=1792074378.31, end=1792074378.31, dur=0.00)
+          - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-ec44-7ff3-8a31-8edd350aa209, start=1792074378.31, end=1792074379.56, dur=1.25)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f12b-77b3-9559-9fe6ed6c53bc, start=1792074379.56, end=1792074379.56, dur=0.00)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f12c-7b33-9ea9-60db08f83fdf, start=1792074379.56, end=1792074379.57, dur=0.01)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f12d-7a81-b5cc-2a59bd9898f4, start=1792074379.57, end=1792074379.57, dur=0.01)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f12d-7a81-b5cc-2a6ef36aeba9, start=1792074379.57, end=1792074379.57, dur=0.00)
+          - TOOL 'get_model_params' (uuid=01a13ff4-f12e-7ea0-a4e4-18b4bc31470d, start=1792074379.57, end=1792074379.57, dur=0.00)
+            - TOOL 'calculator' (uuid=01a13ff4-f12e-7ea0-a4e4-18d8d309fb63, start=1792074379.57, end=1792074379.57, dur=0.00)
+            - TOOL 'get_chip_spec' (uuid=01a13ff4-f12e-7ea0-a4e4-18c8a9db8bb0, start=1792074379.57, end=1792074379.57, dur=0.00)
+            - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f134-7d03-b514-cd7bd77d503f, start=1792074379.57, end=1792074380.17, dur=0.60)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f135-7a30-89c1-1d289a0c3dcd, start=1792074379.57, end=1792074380.17, dur=0.60)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f136-7472-89ad-1ff6fe5fc96b, start=1792074379.57, end=1792074380.17, dur=0.60)
+                  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f136-7472-89ad-2000a8a34ac8, start=1792074379.57, end=1792074379.58, dur=0.00)
+                  - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-f138-7841-b9af-4849134f4ee5, start=1792074379.58, end=1792074380.17, dur=0.60)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f38d-7a80-a425-b183803c12a3, start=1792074380.17, end=1792074380.17, dur=0.00)
+- FUNCTION 'langgraph_wrapper' (uuid=ac972706-2a2d-4461-9455-67c0e4806379, start=1792074378.49, end=1792074380.15, dur=1.67)
+  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ecf6-7882-9ea8-7b8076a9d047, start=1792074378.49, end=1792074380.15, dur=1.67)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ecf7-7a00-a2e1-0d3cfcc4dbf7, start=1792074378.49, end=1792074379.64, dur=1.15)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ecf7-7a00-a2e1-0d4bd90942e1, start=1792074378.49, end=1792074379.64, dur=1.15)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ecf7-7a00-a2e1-0d5634531a82, start=1792074378.49, end=1792074379.64, dur=1.15)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ecf7-7a00-a2e1-0d6edee3f79d, start=1792074378.49, end=1792074378.49, dur=0.00)
+          - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-ecf9-7591-9547-aad760604c36, start=1792074378.49, end=1792074379.64, dur=1.15)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f178-7f20-bcb6-333526dfdee2, start=1792074379.64, end=1792074379.64, dur=0.00)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f17a-73b1-8b00-bee75b9c7f58, start=1792074379.64, end=1792074379.65, dur=0.01)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f17a-73b1-8b00-bef059ddcebd, start=1792074379.64, end=1792074379.65, dur=0.01)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f17a-73b1-8b00-bf036f65a9d1, start=1792074379.64, end=1792074379.65, dur=0.01)
+          - TOOL 'get_model_params' (uuid=01a13ff4-f17c-7910-b971-dd2620657013, start=1792074379.65, end=1792074379.65, dur=0.00)
+          - TOOL 'calculator' (uuid=01a13ff4-f17e-72b1-8beb-94f710bcd208, start=1792074379.65, end=1792074379.65, dur=0.00)
+          - TOOL 'get_chip_spec' (uuid=01a13ff4-f17e-72b1-8beb-94e970e2726e, start=1792074379.65, end=1792074379.65, dur=0.00)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f183-7073-907b-2bc7c92d5cee, start=1792074379.65, end=1792074380.15, dur=0.50)
+            - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f183-7073-907b-2bddcfb0af38, start=1792074379.65, end=1792074380.15, dur=0.50)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f184-7c81-914d-941b491bb240, start=1792074379.65, end=1792074380.15, dur=0.50)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f184-7c81-914d-9426dce08dca, start=1792074379.65, end=1792074379.65, dur=0.00)
+                - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-f186-75c1-a59e-7d189a25ae55, start=1792074379.65, end=1792074380.15, dur=0.50)
+            - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f376-7490-863a-de2ad2df0567, start=1792074380.15, end=1792074380.15, dur=0.00)
+- FUNCTION 'langgraph_wrapper' (uuid=77f731d7-f9f1-4ea7-bf72-7cb73265f9d3, start=1792074378.62, end=1792074380.57, dur=1.95)
+  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ed7b-7b33-bd0d-a8a4401d1b6f, start=1792074378.62, end=1792074380.57, dur=1.95)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ed7b-7b33-bd0d-a8bbd47a35f1, start=1792074378.62, end=1792074379.89, dur=1.27)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ed7c-75f0-9cfb-e318650f1a39, start=1792074378.62, end=1792074379.89, dur=1.27)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ed7c-75f0-9cfb-e321d189c3a4, start=1792074378.62, end=1792074379.89, dur=1.27)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-ed7c-75f0-9cfb-e33da5ef00ec, start=1792074378.62, end=1792074378.62, dur=0.00)
+          - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-ed7d-7740-ae2f-d632922552f4, start=1792074378.62, end=1792074379.89, dur=1.27)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f275-7250-84b4-91a46193aba5, start=1792074379.89, end=1792074379.89, dur=0.00)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f276-7812-9b3f-bd9335e471d2, start=1792074379.90, end=1792074379.90, dur=0.01)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f277-75a3-a91f-04bc797ef4cb, start=1792074379.90, end=1792074379.90, dur=0.01)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f277-75a3-a91f-04cfa93ac598, start=1792074379.90, end=1792074379.90, dur=0.01)
+          - TOOL 'calculator' (uuid=01a13ff4-f278-77d3-b11a-331d4f0dd378, start=1792074379.90, end=1792074379.90, dur=0.00)
+            - TOOL 'get_model_params' (uuid=01a13ff4-f278-77d3-b11a-32f2d0fc5e25, start=1792074379.90, end=1792074379.90, dur=0.00)
+              - TOOL 'get_chip_spec' (uuid=01a13ff4-f278-77d3-b11a-330728542e77, start=1792074379.90, end=1792074379.90, dur=0.00)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f27f-7833-a112-d01d39049c35, start=1792074379.90, end=1792074380.57, dur=0.66)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f27f-7833-a112-d02a68849a01, start=1792074379.90, end=1792074380.57, dur=0.66)
+                  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f280-7021-8e7b-159ed51a87ac, start=1792074379.90, end=1792074380.57, dur=0.66)
+                    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f280-7021-8e7b-15ae8fa30cfb, start=1792074379.91, end=1792074379.91, dur=0.00)
+                    - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-f282-7c92-b4eb-56231eeaf0c6, start=1792074379.91, end=1792074380.57, dur=0.66)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f517-76c2-9510-d7e95d4e17d6, start=1792074380.57, end=1792074380.57, dur=0.00)
+- FUNCTION 'langgraph_wrapper' (uuid=89aa3e91-7c5f-4051-a029-fb530e5a8db6, start=1792074380.15, end=1792074387.36, dur=7.21)
+  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f379-7e41-9682-a3520cc7aec8, start=1792074380.15, end=1792074387.36, dur=7.21)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f37a-7dc2-a43d-e5c18dfbab83, start=1792074380.15, end=1792074381.26, dur=1.10)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f37a-7dc2-a43d-e5ddf13110af, start=1792074380.15, end=1792074381.25, dur=1.10)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f37b-77d1-bc93-447241295671, start=1792074380.16, end=1792074381.25, dur=1.10)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f37b-77d1-bc93-448ac9f19310, start=1792074380.16, end=1792074380.16, dur=0.00)
+          - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-f37c-7f20-abed-5615d5f6976f, start=1792074380.16, end=1792074381.25, dur=1.10)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f7c6-78f0-94c5-955ee4efe259, start=1792074381.25, end=1792074381.25, dur=0.00)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f7c7-7a22-80a3-d5834fd483dc, start=1792074381.26, end=1792074381.26, dur=0.01)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f7c7-7a22-80a3-d59acb38b332, start=1792074381.26, end=1792074381.26, dur=0.01)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f7c8-7d73-bf28-9b1365402cf7, start=1792074381.26, end=1792074381.26, dur=0.01)
+          - TOOL 'calculator' (uuid=01a13ff4-f7c9-7642-9272-c5beb7fe10cc, start=1792074381.26, end=1792074381.26, dur=0.00)
+            - TOOL 'get_model_params' (uuid=01a13ff4-f7c9-7642-9272-c5a475b3a0e4, start=1792074381.26, end=1792074381.26, dur=0.00)
+              - TOOL 'get_chip_spec' (uuid=01a13ff4-f7c8-7d73-bf28-9b282f1a1712, start=1792074381.26, end=1792074381.26, dur=0.00)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f7cf-78b3-9276-eecab3a071a6, start=1792074381.26, end=1792074387.36, dur=6.10)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f7d0-7fb2-8d07-95dc81ad8abc, start=1792074381.26, end=1792074387.36, dur=6.10)
+                  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f7d1-7073-b9f1-495d44481ba3, start=1792074381.27, end=1792074387.36, dur=6.10)
+                    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f7d2-7613-95f7-2c330168d573, start=1792074381.27, end=1792074381.27, dur=0.00)
+                    - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-f7d4-75c1-8fa4-4acc501f4572, start=1792074381.27, end=1792074387.36, dur=6.09)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0fa3-7930-a610-a7d685f0528c, start=1792074387.36, end=1792074387.36, dur=0.00)
+- FUNCTION 'langgraph_wrapper' (uuid=a9193659-2b9f-474b-90d2-cd813b0caa1a, start=1792074380.18, end=1792074382.36, dur=2.18)
+  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f390-74d0-9d1f-244a7c0e912f, start=1792074380.18, end=1792074382.36, dur=2.18)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f391-7bb0-b74c-d43c8694a766, start=1792074380.18, end=1792074381.35, dur=1.17)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f391-7bb0-b74c-d44088871c94, start=1792074380.18, end=1792074381.34, dur=1.17)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f391-7bb0-b74c-d457c0deeb93, start=1792074380.18, end=1792074381.34, dur=1.17)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f391-7bb0-b74c-d4611d626161, start=1792074380.18, end=1792074380.18, dur=0.00)
+          - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-f393-7af2-af14-377795846130, start=1792074380.18, end=1792074381.34, dur=1.16)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f820-7ca2-bcfa-b282ac83211a, start=1792074381.34, end=1792074381.35, dur=0.00)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f822-7980-82b8-cb59a73432d9, start=1792074381.35, end=1792074381.35, dur=0.01)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f822-7980-82b8-cb6a12c8da99, start=1792074381.35, end=1792074381.35, dur=0.01)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f822-7980-82b8-cb7d111e122f, start=1792074381.35, end=1792074381.35, dur=0.01)
+          - TOOL 'get_chip_spec' (uuid=01a13ff4-f823-7d51-9232-0a96ae73ea96, start=1792074381.35, end=1792074381.35, dur=0.00)
+            - TOOL 'get_model_params' (uuid=01a13ff4-f824-7573-a8a0-2adb8430d627, start=1792074381.35, end=1792074381.35, dur=0.00)
+              - TOOL 'calculator' (uuid=01a13ff4-f824-7573-a8a0-2ae2c76a5c10, start=1792074381.35, end=1792074381.35, dur=0.00)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f829-71d2-a0d3-47760c722200, start=1792074381.35, end=1792074382.35, dur=1.00)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f82a-7170-b752-9a533438fbf6, start=1792074381.35, end=1792074382.35, dur=1.00)
+                  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f82b-7fd1-aa3e-51f4a62bf21f, start=1792074381.36, end=1792074382.35, dur=1.00)
+                    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f82b-7fd1-aa3e-520faa088bf2, start=1792074381.36, end=1792074381.36, dur=0.00)
+                    - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-f82d-7d10-bb7e-02824d31a948, start=1792074381.36, end=1792074382.35, dur=0.99)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-fc11-7fd3-8161-b3ad6137d885, start=1792074382.35, end=1792074382.35, dur=0.00)
+- FUNCTION 'langgraph_wrapper' (uuid=89a56dd2-7c3d-408b-ae81-7eae45711021, start=1792074380.22, end=1792074384.70, dur=4.48)
+  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f3ba-7350-82ad-3d898d0e1ffb, start=1792074380.22, end=1792074384.70, dur=4.48)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f3bb-72d0-b50d-79e5989ba015, start=1792074380.22, end=1792074381.20, dur=0.98)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f3bb-72d0-b50d-79f3ab045348, start=1792074380.22, end=1792074381.20, dur=0.98)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f3bb-72d0-b50d-7a0fd35c4f67, start=1792074380.22, end=1792074381.20, dur=0.98)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f3bb-72d0-b50d-7a1914ddaf20, start=1792074380.22, end=1792074380.22, dur=0.00)
+          - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-f3bd-7350-93fb-56a59bef78a4, start=1792074380.22, end=1792074381.20, dur=0.98)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f78f-7bd0-ae97-3e530f5e5d6d, start=1792074381.20, end=1792074381.20, dur=0.00)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f791-7fd3-980f-c4fa750f53cc, start=1792074381.20, end=1792074381.21, dur=0.01)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f791-7fd3-980f-c503f8b2baa1, start=1792074381.20, end=1792074381.21, dur=0.01)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f791-7fd3-980f-c51d790085be, start=1792074381.20, end=1792074381.21, dur=0.01)
+          - TOOL 'get_chip_spec' (uuid=01a13ff4-f793-7650-81a0-84c71a5a60e0, start=1792074381.20, end=1792074381.21, dur=0.00)
+            - TOOL 'get_model_params' (uuid=01a13ff4-f793-7650-81a0-84d44c8902d6, start=1792074381.20, end=1792074381.21, dur=0.00)
+              - TOOL 'calculator' (uuid=01a13ff4-f794-7b61-98a8-4179be04f4be, start=1792074381.21, end=1792074381.21, dur=0.00)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f79a-7373-844c-3b0af9dbb087, start=1792074381.21, end=1792074384.70, dur=3.49)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f79a-7373-844c-3b1d417266f1, start=1792074381.21, end=1792074384.70, dur=3.49)
+                  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f79b-7b20-8dae-31ea881491fe, start=1792074381.21, end=1792074384.70, dur=3.48)
+                    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f79c-77a0-ab70-ea7f2f7489d5, start=1792074381.21, end=1792074381.21, dur=0.00)
+                    - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-f79e-74a2-afd1-24d4e26b7acd, start=1792074381.21, end=1792074384.70, dur=3.48)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0538-75e0-9441-b729c7bfa115, start=1792074384.70, end=1792074384.70, dur=0.00)
+- FUNCTION 'langgraph_wrapper' (uuid=17f855e1-c763-4b47-962d-ba29ef527f07, start=1792074380.57, end=1792074382.22, dur=1.65)
+  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f51a-7f31-bf0d-210b89b56570, start=1792074380.57, end=1792074382.22, dur=1.65)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f51b-7313-856e-a1ff10a42039, start=1792074380.57, end=1792074381.59, dur=1.02)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f51b-7313-856e-a204680050c8, start=1792074380.57, end=1792074381.59, dur=1.02)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f51b-7313-856e-a211a846b495, start=1792074380.57, end=1792074381.59, dur=1.02)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f51c-7443-be3c-2bbfa78a199e, start=1792074380.57, end=1792074380.57, dur=0.00)
+          - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-f51d-73a3-b2ad-b5fb6ad7ed2d, start=1792074380.57, end=1792074381.59, dur=1.01)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f914-73b0-9a80-781ff3b6c3f8, start=1792074381.59, end=1792074381.59, dur=0.00)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f916-7050-b9d5-9f9c2c7b3488, start=1792074381.59, end=1792074381.60, dur=0.01)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f916-7050-b9d5-9faff79bc053, start=1792074381.59, end=1792074381.60, dur=0.01)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f916-7050-b9d5-9fbaee8723f0, start=1792074381.59, end=1792074381.60, dur=0.01)
+          - TOOL 'get_chip_spec' (uuid=01a13ff4-f917-7ad3-8e91-fcbf53b2f9eb, start=1792074381.59, end=1792074381.59, dur=0.00)
+          - TOOL 'calculator' (uuid=01a13ff4-f919-7c91-96d4-12c252c827dd, start=1792074381.59, end=1792074381.60, dur=0.00)
+            - TOOL 'get_model_params' (uuid=01a13ff4-f917-7ad3-8e91-fca2124faefd, start=1792074381.60, end=1792074381.60, dur=0.00)
+            - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f91f-79b2-aae5-088bf94f2733, start=1792074381.60, end=1792074382.22, dur=0.62)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f91f-79b2-aae5-089c64f25758, start=1792074381.60, end=1792074382.22, dur=0.62)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f920-7d51-9f76-dde679871b80, start=1792074381.60, end=1792074382.22, dur=0.62)
+                  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-f920-7d51-9f76-ddfbe2a347bb, start=1792074381.60, end=1792074381.60, dur=0.00)
+                  - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-f922-7d43-a5ee-04d6f715ae63, start=1792074381.60, end=1792074382.22, dur=0.62)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-fb8a-7243-bb8e-a90b7f12e20c, start=1792074382.22, end=1792074382.22, dur=0.00)
+- FUNCTION 'langgraph_wrapper' (uuid=a728b0f1-befa-42ee-9e8c-df69c11b133c, start=1792074382.22, end=1792074388.54, dur=6.32)
+  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-fb8e-7100-a3ec-e95c9aef9aad, start=1792074382.22, end=1792074388.54, dur=6.31)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-fb8e-7100-a3ec-e96e69e162d1, start=1792074382.22, end=1792074387.63, dur=5.40)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-fb8f-7b01-8749-73017c110a07, start=1792074382.22, end=1792074387.62, dur=5.40)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-fb8f-7b01-8749-7317c03f7f74, start=1792074382.22, end=1792074387.62, dur=5.40)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-fb8f-7b01-8749-732b1fc49685, start=1792074382.22, end=1792074382.22, dur=0.00)
+          - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-fb91-71e2-992f-1d6fd3e5e539, start=1792074382.23, end=1792074387.62, dur=5.40)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-10a8-71c3-a513-7a51ce8722cf, start=1792074387.62, end=1792074387.62, dur=0.00)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-10a9-7252-b72f-9e76de761434, start=1792074387.63, end=1792074388.13, dur=0.50)
+      - TOOL 'web_search' (uuid=01a13ff5-10aa-7cd1-ae80-bc36200899a2, start=1792074387.63, end=1792074388.13, dur=0.50)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-12a0-7ef1-981d-3809e70a693a, start=1792074388.13, end=1792074388.54, dur=0.41)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-12a0-7ef1-981d-381c2b5cf800, start=1792074388.13, end=1792074388.54, dur=0.41)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-12a1-71c3-97b5-3974b36ad089, start=1792074388.13, end=1792074388.53, dur=0.40)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-12a2-7063-95b7-40790ac43ade, start=1792074388.13, end=1792074388.13, dur=0.00)
+          - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff5-12a4-7a30-87a0-28f3332eb567, start=1792074388.13, end=1792074388.53, dur=0.40)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-1437-7ac1-91bf-9344aebbf812, start=1792074388.54, end=1792074388.54, dur=0.00)
+- FUNCTION 'langgraph_wrapper' (uuid=b6794b4a-1fe0-4e11-92cb-66512a032c3c, start=1792074382.36, end=1792074384.94, dur=2.58)
+  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-fc15-7ac2-9b2a-c8146190dd26, start=1792074382.36, end=1792074384.94, dur=2.58)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-fc15-7ac2-9b2a-c824b2eb1da5, start=1792074382.36, end=1792074383.65, dur=1.29)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-fc15-7ac2-9b2a-c83b933c5916, start=1792074382.36, end=1792074383.65, dur=1.29)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-fc16-7a31-a909-adcfce19c3ef, start=1792074382.36, end=1792074383.65, dur=1.29)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff4-fc16-7a31-a909-add612615a42, start=1792074382.36, end=1792074382.36, dur=0.00)
+          - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff4-fc17-74e3-9481-0cc7338f4575, start=1792074382.36, end=1792074383.65, dur=1.29)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0122-7f73-8fbb-b352472a7949, start=1792074383.65, end=1792074383.65, dur=0.00)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0123-75f0-bbce-fecc62032621, start=1792074383.65, end=1792074384.16, dur=0.50)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0124-7683-b381-000c1d94e2e4, start=1792074383.65, end=1792074384.16, dur=0.50)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0124-7683-b381-0014454af560, start=1792074383.65, end=1792074383.66, dur=0.00)
+          - TOOL 'web_search' (uuid=01a13ff5-0125-7293-af84-83eb42d2278d, start=1792074383.65, end=1792074384.15, dur=0.50)
+            - TOOL 'web_search' (uuid=01a13ff5-0126-76c0-83f1-6c8d2e8f2c91, start=1792074383.65, end=1792074384.16, dur=0.50)
+              - TOOL 'calculator' (uuid=01a13ff5-0126-76c0-83f1-6c905b0918ee, start=1792074383.66, end=1792074383.66, dur=0.00)
+            - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-031c-7980-a999-1a25e69413b1, start=1792074384.16, end=1792074384.94, dur=0.78)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-031c-7980-a999-1a3f036b915d, start=1792074384.16, end=1792074384.94, dur=0.78)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-031d-7d20-945b-70de36f0db4e, start=1792074384.16, end=1792074384.94, dur=0.78)
+                  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-031e-76f3-af77-ed76e65d10d1, start=1792074384.16, end=1792074384.16, dur=0.00)
+                  - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff5-031f-7a80-a33d-f10c9058c1ee, start=1792074384.16, end=1792074384.94, dur=0.77)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0628-7e11-a03c-501ebffa006a, start=1792074384.94, end=1792074384.94, dur=0.00)
+- FUNCTION 'langgraph_wrapper' (uuid=efeba905-4bc3-4343-a56c-294c439da4d3, start=1792074384.70, end=1792074387.07, dur=2.37)
+  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-053c-7663-b9ba-8b51a7982ce4, start=1792074384.70, end=1792074387.07, dur=2.37)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-053d-7742-8ce2-fc0ab8d2139c, start=1792074384.70, end=1792074385.87, dur=1.17)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-053d-7742-8ce2-fc1862294eb9, start=1792074384.70, end=1792074385.87, dur=1.17)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-053d-7742-8ce2-fc263c1483e0, start=1792074384.70, end=1792074385.87, dur=1.17)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-053d-7742-8ce2-fc36a463c00c, start=1792074384.70, end=1792074384.70, dur=0.00)
+          - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff5-053f-7353-ab54-4ade528110f4, start=1792074384.70, end=1792074385.87, dur=1.17)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-09cf-7c61-a18a-43c6cd62b3e1, start=1792074385.87, end=1792074385.87, dur=0.00)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-09d1-7cf1-9df7-59e7fdca386e, start=1792074385.87, end=1792074386.38, dur=0.50)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-09d1-7cf1-9df7-59f6adc26883, start=1792074385.87, end=1792074386.38, dur=0.50)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-09d1-7cf1-9df7-5a0891ad9621, start=1792074385.87, end=1792074385.88, dur=0.00)
+          - TOOL 'web_search' (uuid=01a13ff5-09d2-7120-98c8-8d28ac78f593, start=1792074385.88, end=1792074386.38, dur=0.50)
+            - TOOL 'web_search' (uuid=01a13ff5-09d2-7120-98c8-8d1f4f736032, start=1792074385.88, end=1792074386.38, dur=0.50)
+              - TOOL 'calculator' (uuid=01a13ff5-09d4-7df1-a96c-dfee05db71ca, start=1792074385.88, end=1792074385.88, dur=0.00)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0bca-7810-aa86-6b55cc533718, start=1792074386.38, end=1792074387.06, dur=0.69)
+            - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0bcb-7412-805f-a66fb899eedc, start=1792074386.38, end=1792074387.06, dur=0.68)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0bcc-71b1-b5dd-ec48e3df78ef, start=1792074386.38, end=1792074387.06, dur=0.68)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0bcc-71b1-b5dd-ec5be5845d02, start=1792074386.38, end=1792074386.38, dur=0.00)
+                - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff5-0bce-74b2-92b0-2e963edce8c4, start=1792074386.38, end=1792074387.06, dur=0.68)
+            - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0e78-7da3-b485-db9685c8af2a, start=1792074387.06, end=1792074387.06, dur=0.00)
+- FUNCTION 'langgraph_wrapper' (uuid=34590689-8adb-40b4-9619-89088e25b747, start=1792074384.94, end=1792074387.15, dur=2.21)
+  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-062b-7352-8454-440e76e2fea3, start=1792074384.94, end=1792074387.15, dur=2.21)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-062b-7352-8454-44196d50c490, start=1792074384.94, end=1792074386.13, dur=1.19)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-062c-79f2-ad98-9144a01c71d5, start=1792074384.94, end=1792074386.13, dur=1.19)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-062c-79f2-ad98-91522bed66ef, start=1792074384.94, end=1792074386.13, dur=1.19)
+          - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-062c-79f2-ad98-9160653359fc, start=1792074384.94, end=1792074384.94, dur=0.00)
+          - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff5-062e-70f2-82d8-b998e03f7e78, start=1792074384.94, end=1792074386.13, dur=1.18)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0acf-7c43-8a26-c1d2b8634c39, start=1792074386.13, end=1792074386.13, dur=0.00)
+    - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0ad1-7883-87e3-c5b83bab6e8c, start=1792074386.13, end=1792074386.63, dur=0.51)
+      - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0ad1-7883-87e3-c5c7d15585ef, start=1792074386.13, end=1792074386.63, dur=0.50)
+        - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0ad1-7883-87e3-c5d696e76991, start=1792074386.13, end=1792074386.13, dur=0.00)
+          - TOOL 'web_search' (uuid=01a13ff5-0ad2-75f0-82d1-bc27a719ebd7, start=1792074386.13, end=1792074386.63, dur=0.50)
+            - TOOL 'web_search' (uuid=01a13ff5-0ad2-75f0-82d1-bc1905a3cfc6, start=1792074386.13, end=1792074386.63, dur=0.50)
+              - TOOL 'calculator' (uuid=01a13ff5-0ad4-7ee1-9171-19236e768c7d, start=1792074386.13, end=1792074386.13, dur=0.00)
+            - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0cca-71d3-88dc-56ef3d83091a, start=1792074386.64, end=1792074387.15, dur=0.51)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0ccb-74d2-bcad-46a92ab4f9cb, start=1792074386.64, end=1792074387.15, dur=0.51)
+                - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0ccc-7341-a968-25c8009e2c89, start=1792074386.64, end=1792074387.15, dur=0.51)
+                  - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0ccc-7341-a968-25d92ba02d12, start=1792074386.64, end=1792074386.64, dur=0.00)
+                  - LLM 'Qwen/Qwen2.5-1.5B-Instruct' (uuid=01a13ff5-0cce-7ab1-ba16-8e3e8dd856cb, start=1792074386.64, end=1792074387.15, dur=0.51)
+              - FUNCTION 'langgraph_wrapper' (uuid=01a13ff5-0ecb-75b3-9d37-1ef5a7ba2887, start=1792074387.15, end=1792074387.15, dur=0.00)
+
+
+=== Concurrency Spike Analysis ===
+Total calls in dataset: 78
+Total time observed: 12.01 units (sum of concurrency timeline)
+
+-- Concurrency Distribution --
+  concurrency=0: 0.01 time
+  concurrency=1: 1.16 time
+  concurrency=2: 0.22 time
+  concurrency=3: 0.32 time
+  concurrency=4: 9.03 time
+  concurrency=5: 1.02 time
+  concurrency=6: 0.25 time
+  concurrency=7: 0.00 time
+
+Percentiles => p50=4.0, p90=5.0, p95=5.0, p99=6.0
+Spike threshold chosen: 4
+
+-- Detected Spike Intervals --
+1) 1792074376.53-1792074377.72, concurrency=4, length=1.19, #active_calls=4
+2) 1792074377.72-1792074377.72, concurrency=4, length=0.00, #active_calls=4
+3) 1792074377.72-1792074377.72, concurrency=5, length=0.00, #active_calls=5
+4) 1792074377.72-1792074377.72, concurrency=6, length=0.00, #active_calls=6
+5) 1792074377.72-1792074377.72, concurrency=5, length=0.00, #active_calls=5
+6) 1792074377.72-1792074377.73, concurrency=4, length=0.00, #active_calls=4
+7) 1792074377.73-1792074377.77, concurrency=4, length=0.03, #active_calls=4
+8) 1792074377.77-1792074377.77, concurrency=4, length=0.00, #active_calls=4
+9) 1792074377.77-1792074377.77, concurrency=5, length=0.00, #active_calls=5
+10) 1792074377.77-1792074377.77, concurrency=4, length=0.00, #active_calls=4
+11) 1792074377.77-1792074377.77, concurrency=5, length=0.00, #active_calls=5
+12) 1792074377.77-1792074377.77, concurrency=4, length=0.00, #active_calls=4
+13) 1792074377.78-1792074377.85, concurrency=4, length=0.06, #active_calls=4
+14) 1792074377.85-1792074377.85, concurrency=4, length=0.00, #active_calls=4
+15) 1792074377.85-1792074377.86, concurrency=4, length=0.00, #active_calls=4
+16) 1792074377.86-1792074377.86, concurrency=5, length=0.00, #active_calls=5
+17) 1792074377.86-1792074377.86, concurrency=4, length=0.00, #active_calls=4
+18) 1792074377.86-1792074377.97, concurrency=4, length=0.11, #active_calls=4
+19) 1792074377.98-1792074377.98, concurrency=4, length=0.00, #active_calls=4
+20) 1792074377.98-1792074377.98, concurrency=5, length=0.00, #active_calls=5
+21) 1792074377.98-1792074377.98, concurrency=4, length=0.00, #active_calls=4
+22) 1792074377.98-1792074377.98, concurrency=5, length=0.00, #active_calls=5
+23) 1792074377.98-1792074377.98, concurrency=4, length=0.00, #active_calls=4
+24) 1792074377.99-1792074378.19, concurrency=4, length=0.21, #active_calls=4
+25) 1792074378.20-1792074378.30, concurrency=4, length=0.10, #active_calls=4
+26) 1792074378.31-1792074378.48, concurrency=4, length=0.17, #active_calls=4
+27) 1792074378.49-1792074378.61, concurrency=4, length=0.13, #active_calls=4
+28) 1792074378.62-1792074379.50, concurrency=4, length=0.87, #active_calls=4
+29) 1792074379.50-1792074379.50, concurrency=4, length=0.00, #active_calls=4
+30) 1792074379.50-1792074379.50, concurrency=4, length=0.00, #active_calls=4
+31) 1792074379.50-1792074379.50, concurrency=5, length=0.00, #active_calls=5
+32) 1792074379.50-1792074379.51, concurrency=4, length=0.00, #active_calls=4
+33) 1792074379.51-1792074379.56, concurrency=4, length=0.05, #active_calls=4
+34) 1792074379.57-1792074379.57, concurrency=4, length=0.00, #active_calls=4
+35) 1792074379.57-1792074379.57, concurrency=5, length=0.00, #active_calls=5
+36) 1792074379.57-1792074379.57, concurrency=4, length=0.00, #active_calls=4
+37) 1792074379.57-1792074379.57, concurrency=5, length=0.00, #active_calls=5
+38) 1792074379.57-1792074379.57, concurrency=4, length=0.00, #active_calls=4
+39) 1792074379.58-1792074379.64, concurrency=4, length=0.06, #active_calls=4
+40) 1792074379.65-1792074379.65, concurrency=4, length=0.00, #active_calls=4
+41) 1792074379.65-1792074379.65, concurrency=4, length=0.00, #active_calls=4
+42) 1792074379.65-1792074379.65, concurrency=4, length=0.00, #active_calls=4
+43) 1792074379.65-1792074379.89, concurrency=4, length=0.24, #active_calls=4
+44) 1792074379.90-1792074379.90, concurrency=4, length=0.00, #active_calls=4
+45) 1792074379.90-1792074379.90, concurrency=5, length=0.00, #active_calls=5
+46) 1792074379.90-1792074379.90, concurrency=6, length=0.00, #active_calls=6
+47) 1792074379.90-1792074379.90, concurrency=5, length=0.00, #active_calls=5
+48) 1792074379.90-1792074379.90, concurrency=4, length=0.00, #active_calls=4
+49) 1792074379.91-1792074380.15, concurrency=4, length=0.24, #active_calls=4
+50) 1792074380.16-1792074380.17, concurrency=4, length=0.02, #active_calls=4
+51) 1792074380.18-1792074380.21, concurrency=4, length=0.03, #active_calls=4
+52) 1792074380.22-1792074380.57, concurrency=4, length=0.35, #active_calls=4
+53) 1792074380.57-1792074381.20, concurrency=4, length=0.63, #active_calls=4
+54) 1792074381.20-1792074381.20, concurrency=4, length=0.00, #active_calls=4
+55) 1792074381.20-1792074381.21, concurrency=5, length=0.00, #active_calls=5
+56) 1792074381.21-1792074381.21, concurrency=6, length=0.00, #active_calls=6
+57) 1792074381.21-1792074381.21, concurrency=5, length=0.00, #active_calls=5
+58) 1792074381.21-1792074381.21, concurrency=4, length=0.00, #active_calls=4
+59) 1792074381.21-1792074381.25, concurrency=4, length=0.04, #active_calls=4
+60) 1792074381.26-1792074381.26, concurrency=4, length=0.00, #active_calls=4
+61) 1792074381.26-1792074381.26, concurrency=5, length=0.00, #active_calls=5
+62) 1792074381.26-1792074381.26, concurrency=6, length=0.00, #active_calls=6
+63) 1792074381.26-1792074381.26, concurrency=5, length=0.00, #active_calls=5
+64) 1792074381.26-1792074381.26, concurrency=4, length=0.00, #active_calls=4
+65) 1792074381.27-1792074381.34, concurrency=4, length=0.07, #active_calls=4
+66) 1792074381.35-1792074381.35, concurrency=4, length=0.00, #active_calls=4
+67) 1792074381.35-1792074381.35, concurrency=5, length=0.00, #active_calls=5
+68) 1792074381.35-1792074381.35, concurrency=6, length=0.00, #active_calls=6
+69) 1792074381.35-1792074381.35, concurrency=5, length=0.00, #active_calls=5
+70) 1792074381.35-1792074381.35, concurrency=4, length=0.00, #active_calls=4
+71) 1792074381.36-1792074381.59, concurrency=4, length=0.23, #active_calls=4
+72) 1792074381.59-1792074381.59, concurrency=4, length=0.00, #active_calls=4
+73) 1792074381.59-1792074381.60, concurrency=4, length=0.00, #active_calls=4
+74) 1792074381.60-1792074381.60, concurrency=5, length=0.00, #active_calls=5
+75) 1792074381.60-1792074381.60, concurrency=4, length=0.00, #active_calls=4
+76) 1792074381.60-1792074382.22, concurrency=4, length=0.62, #active_calls=4
+77) 1792074382.23-1792074382.35, concurrency=4, length=0.13, #active_calls=4
+78) 1792074382.36-1792074383.65, concurrency=4, length=1.29, #active_calls=4
+79) 1792074383.65-1792074383.65, concurrency=4, length=0.00, #active_calls=4
+80) 1792074383.65-1792074383.66, concurrency=5, length=0.00, #active_calls=5
+81) 1792074383.66-1792074383.66, concurrency=6, length=0.00, #active_calls=6
+82) 1792074383.66-1792074384.15, concurrency=5, length=0.50, #active_calls=5
+83) 1792074384.15-1792074384.16, concurrency=4, length=0.00, #active_calls=4
+84) 1792074384.16-1792074384.70, concurrency=4, length=0.54, #active_calls=4
+85) 1792074384.70-1792074384.94, concurrency=4, length=0.23, #active_calls=4
+86) 1792074384.94-1792074385.87, concurrency=4, length=0.93, #active_calls=4
+87) 1792074385.88-1792074385.88, concurrency=4, length=0.00, #active_calls=4
+88) 1792074385.88-1792074385.88, concurrency=5, length=0.00, #active_calls=5
+89) 1792074385.88-1792074385.88, concurrency=6, length=0.00, #active_calls=6
+90) 1792074385.88-1792074386.13, concurrency=5, length=0.25, #active_calls=5
+91) 1792074386.13-1792074386.13, concurrency=4, length=0.00, #active_calls=4
+92) 1792074386.13-1792074386.13, concurrency=5, length=0.00, #active_calls=5
+93) 1792074386.13-1792074386.13, concurrency=6, length=0.00, #active_calls=6
+94) 1792074386.13-1792074386.13, concurrency=7, length=0.00, #active_calls=7
+95) 1792074386.13-1792074386.38, concurrency=6, length=0.24, #active_calls=6
+96) 1792074386.38-1792074386.38, concurrency=5, length=0.00, #active_calls=5
+97) 1792074386.38-1792074386.38, concurrency=4, length=0.01, #active_calls=4
+98) 1792074386.38-1792074386.63, concurrency=5, length=0.25, #active_calls=5
+99) 1792074386.63-1792074386.63, concurrency=4, length=0.00, #active_calls=4
+100) 1792074386.64-1792074387.06, concurrency=4, length=0.42, #active_calls=4
+
+-- Correlation Stats for Spiked Calls --
+Avg prompt_tokens in spike calls: 601.3
+Avg total_tokens in spike calls : 771.5
+
+-- Average Latency by Midpoint Concurrency --
+  concurrency=1 => avg_latency=0.45
+  concurrency=3 => avg_latency=0.50
+  concurrency=4 => avg_latency=0.96
+  concurrency=5 => avg_latency=0.13
+  concurrency=6 => avg_latency=0.00
+  concurrency=7 => avg_latency=0.00

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "q01",
+    "question": "What is the minimum decode time per token in milliseconds for Llama-3.1-8B in fp16 on one A100 80GB, if every token must read all weights once?",
+    "answer": "7.876 ms",
+    "answer_value": 7.876410004904364
+  },
+  {
+    "id": "q02",
+    "question": "What is the minimum decode time per token in milliseconds for Qwen2.5-7B in fp16 on one L4, if every token must read all weights once?",
+    "answer": "50.8 ms",
+    "answer_value": 50.8
+  },
+  {
+    "id": "q03",
+    "question": "What is the minimum decode time per token in milliseconds for Mistral-7B in fp16 on one RTX 4090, if every token must read all weights once?",
+    "answer": "14.38 ms",
+    "answer_value": 14.384920634920634
+  },
+  {
+    "id": "q04",
+    "question": "What is the minimum decode time per token in milliseconds for Llama-3.1-70B in fp16 on one H100 SXM, if every token must read all weights once?",
+    "answer": "42.15 ms",
+    "answer_value": 42.14925373134328
+  },
+  {
+    "id": "q05",
+    "question": "At batch size 1, what is the upper bound on decode tokens per second for Qwen2.5-1.5B in fp16 on a RTX 3060 Ti?",
+    "answer": "145.5 tokens/s",
+    "answer_value": 145.45454545454544
+  },
+  {
+    "id": "q06",
+    "question": "At batch size 1, what is the upper bound on decode tokens per second for Llama-3.1-8B in fp16 on a H100 SXM?",
+    "answer": "208.6 tokens/s",
+    "answer_value": 208.5927770859278
+  },
+  {
+    "id": "q07",
+    "question": "At batch size 1, what is the upper bound on decode tokens per second for Mistral-7B in fp16 on a L4?",
+    "answer": "20.69 tokens/s",
+    "answer_value": 20.689655172413794
+  },
+  {
+    "id": "q08",
+    "question": "At batch size 1, what is the upper bound on decode tokens per second for Qwen2.5-7B in fp16 on a A100 80GB?",
+    "answer": "133.8 tokens/s",
+    "answer_value": 133.79265091863516
+  },
+  {
+    "id": "q09",
+    "question": "How many GB of memory are left on a RTX 4090 after loading Llama-3.1-8B fp16 weights? Give a negative number if it does not fit.",
+    "answer": "7.94 GB",
+    "answer_value": 7.940000000000001
+  },
+  {
+    "id": "q10",
+    "question": "How many GB of memory are left on a RTX 3060 Ti after loading Qwen2.5-7B fp16 weights? Give a negative number if it does not fit.",
+    "answer": "-7.24 GB",
+    "answer_value": -7.24
+  },
+  {
+    "id": "q11",
+    "question": "How many GB of memory are left on a A100 80GB after loading Llama-3.1-70B fp16 weights? Give a negative number if it does not fit.",
+    "answer": "-61.2 GB",
+    "answer_value": -61.19999999999999
+  },
+  {
+    "id": "q12",
+    "question": "How many GB of memory are left on a L4 after loading Mistral-7B fp16 weights? Give a negative number if it does not fit.",
+    "answer": "9.5 GB",
+    "answer_value": 9.5
+  },
+  {
+    "id": "q13",
+    "question": "First search what paged attention is and summarize it in one sentence. Then compute the minimum decode time per token in milliseconds for Llama-3.1-8B in fp16 on a L4.",
+    "answer": "53.53 ms",
+    "answer_value": 53.53333333333333
+  },
+  {
+    "id": "q14",
+    "question": "First search what kv cache is and summarize it in one sentence. Then compute the minimum decode time per token in milliseconds for Qwen2.5-1.5B in fp16 on a H100 SXM.",
+    "answer": "0.9194 ms",
+    "answer_value": 0.9194029850746268
+  },
+  {
+    "id": "q15",
+    "question": "First search what continuous batching is and summarize it in one sentence. Then compute the minimum decode time per token in milliseconds for Mistral-7B in fp16 on a A100 80GB.",
+    "answer": "7.111 ms",
+    "answer_value": 7.111329082883766
+  },
+  {
+    "id": "q16",
+    "question": "First search what speculative decoding is and summarize it in one sentence. Then compute the minimum decode time per token in milliseconds for Qwen2.5-7B in fp16 on a RTX 4090.",
+    "answer": "15.12 ms",
+    "answer_value": 15.119047619047619
+  }
+]

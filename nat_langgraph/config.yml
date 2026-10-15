@@ -1,0 +1,28 @@
+# NeMo Agent Toolkit config: wrap graph.py's LangGraph agent and profile it over dataset.json.
+#   nat eval --config_file config.yml --override eval.general.max_concurrency 4 \
+#            --override eval.general.output_dir results/c4
+workflow:
+  _type: langgraph_wrapper
+  description: LangGraph tool-calling agent for LLM inference questions, served by vLLM
+  graph: ./graph.py:graph
+  env:
+    VLLM_BASE_URL: http://127.0.0.1:8000/v1
+    VLLM_MODEL: Qwen/Qwen2.5-1.5B-Instruct
+
+eval:
+  general:
+    max_concurrency: 1
+    output_dir: ./results/c1
+    dataset:
+      _type: json
+      file_path: ./dataset.json
+    profiler:
+      compute_llm_metrics: true
+      token_uniqueness_forecast: true
+      workflow_runtime_forecast: true
+      csv_exclude_io_text: true
+      bottleneck_analysis:
+        enable_nested_stack: true
+      concurrency_spike_analysis:
+        enable: true
+        spike_threshold: 4
