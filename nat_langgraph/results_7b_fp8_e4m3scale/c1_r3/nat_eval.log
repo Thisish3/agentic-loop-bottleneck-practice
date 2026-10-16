@@ -1,0 +1,70 @@
+/root/agentlab/agent/lib/python3.12/site-packages/nat/authentication/credential_validator/bearer_token_validator.py:25: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey
+2026-10-16 12:45:31 - INFO     - nat.plugins.eval.runtime.evaluate:723 - Starting evaluation run with config file: config.yml
+2026-10-16 12:45:31 - INFO     - nat.cli.cli_utils.config_override:105 - Successfully set override for eval.general.max_concurrency with value: 1 with type <class 'int'>)
+2026-10-16 12:45:31 - INFO     - nat.cli.cli_utils.config_override:105 - Successfully set override for eval.general.output_dir with value: results_7b_fp8_e4m3scale/c1_r3 with type <class 'str'>)
+2026-10-16 12:45:31 - INFO     - nat.cli.cli_utils.config_override:105 - Successfully set override for workflow.env.VLLM_MODEL with value: Qwen/Qwen2.5-7B-Instruct-AWQ with type <class 'str'>)
+2026-10-16 12:45:31 - INFO     - nat.cli.cli_utils.config_override:211 - 
+
+Configuration after overrides:
+
+eval:
+  general:
+    dataset:
+      _type: json
+      file_path: ./dataset.json
+    max_concurrency: 1
+    output_dir: results_7b_fp8_e4m3scale/c1_r3
+    profiler:
+      bottleneck_analysis:
+        enable_nested_stack: true
+      compute_llm_metrics: true
+      concurrency_spike_analysis:
+        enable: true
+        spike_threshold: 4
+      csv_exclude_io_text: true
+      token_uniqueness_forecast: true
+      workflow_runtime_forecast: true
+workflow:
+  _type: langgraph_wrapper
+  description: LangGraph tool-calling agent for LLM inference questions, served by
+    vLLM
+  env:
+    VLLM_BASE_URL: http://127.0.0.1:8000/v1
+    VLLM_MODEL: Qwen/Qwen2.5-7B-Instruct-AWQ
+  graph: ./graph.py:graph
+
+2026-10-16 12:45:32 - INFO     - nat.runtime.session:332 - Shared workflow built (entry_function=None)
+Running workflow:   0%|          | 0/16 [00:00<?, ?it/s]2026-10-16 12:45:41 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:   6%|▋         | 1/16 [00:09<02:15,  9.07s/it]2026-10-16 12:45:50 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  12%|█▎        | 2/16 [00:17<02:01,  8.67s/it]2026-10-16 12:45:58 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  19%|█▉        | 3/16 [00:25<01:51,  8.55s/it]2026-10-16 12:46:07 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  25%|██▌       | 4/16 [00:34<01:42,  8.50s/it]2026-10-16 12:46:10 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  31%|███▏      | 5/16 [00:37<01:12,  6.57s/it]2026-10-16 12:46:14 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  38%|███▊      | 6/16 [00:41<00:58,  5.88s/it]2026-10-16 12:46:23 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  44%|████▍     | 7/16 [00:50<01:00,  6.69s/it]2026-10-16 12:46:31 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  50%|█████     | 8/16 [00:58<00:57,  7.24s/it]2026-10-16 12:46:32 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  56%|█████▋    | 9/16 [00:59<00:37,  5.32s/it]2026-10-16 12:46:41 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  62%|██████▎   | 10/16 [01:08<00:37,  6.29s/it]2026-10-16 12:46:41 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  69%|██████▉   | 11/16 [01:08<00:22,  4.47s/it]2026-10-16 12:46:49 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  75%|███████▌  | 12/16 [01:17<00:22,  5.66s/it]2026-10-16 12:46:54 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  81%|████████▏ | 13/16 [01:21<00:15,  5.22s/it]2026-10-16 12:47:02 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  88%|████████▊ | 14/16 [01:29<00:12,  6.21s/it]2026-10-16 12:47:11 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  94%|█████████▍| 15/16 [01:38<00:06,  6.89s/it]2026-10-16 12:47:16 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow: 100%|██████████| 16/16 [01:43<00:00,  6.35s/it]Running workflow: 100%|██████████| 16/16 [01:43<00:00,  6.46s/it]
+2026-10-16 12:47:16 - WARNING  - nat.plugins.eval.runtime.evaluate:606 - All evaluators were empty or invalid.
+2026-10-16 12:47:16 - INFO     - nat.plugins.profiler.profile_runner:168 - Wrote combined data to: results_7b_fp8_e4m3scale/c1_r3/all_requests_profiler_traces.json
+2026-10-16 12:47:16 - INFO     - nat.plugins.profiler.profile_runner:187 - Wrote merged standardized DataFrame to results_7b_fp8_e4m3scale/c1_r3/standardized_data_all.csv
+2026-10-16 12:47:16 - INFO     - nat.plugins.profiler.profile_runner:269 - Wrote inference optimization results to: results_7b_fp8_e4m3scale/c1_r3/inference_optimization.json
+2026-10-16 12:47:18 - INFO     - nat.plugins.profiler.profile_runner:293 - Nested stack analysis complete
+2026-10-16 12:47:18 - INFO     - nat.plugins.profiler.profile_runner:304 - Concurrency spike analysis complete
+2026-10-16 12:47:18 - INFO     - nat.plugins.profiler.profile_runner:333 - Wrote workflow profiling report to: results_7b_fp8_e4m3scale/c1_r3/workflow_profiling_report.txt
+2026-10-16 12:47:18 - INFO     - nat.plugins.profiler.profile_runner:340 - Wrote workflow profiling metrics to: results_7b_fp8_e4m3scale/c1_r3/workflow_profiling_metrics.json
+
+=== EVALUATION SUMMARY ===
+Workflow Status: COMPLETED (workflow_output.json)
+Total Runtime: 103.32s
+Workflow Runtime (p95): 8.65s
+LLM Latency (p95): 8.64s
+[0m[0m

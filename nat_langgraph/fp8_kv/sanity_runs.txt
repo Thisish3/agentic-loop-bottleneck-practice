@@ -1,0 +1,30 @@
+### fp8scale.out
+[12:40:47] === e4m3scale: --kv-cache-dtype fp8 --calculate-kv-scales
+[1;36m(EngineCore_DP0 pid=44919)[0;0m INFO 10-16 12:41:38 [kv_cache_utils.py:1229] GPU KV cache size: 48,240 tokens
+SANITY: "11122" is a sequence of digits; without additional context or mathematical operation specified,, it's simply read the string of numbers numbers the string of characters.
+[12:48:09] === e5m2: --kv-cache-dtype fp8_e5m2
+[1;36m(EngineCore_DP0 pid=47555)[0;0m INFO 10-16 12:49:00 [kv_cache_utils.py:1229] GPU KV cache size: 48,496 tokens
+SANITY: It seems you're?
+### ctrl.out
+[12:51:01] === fp16_flashinfer: backend=FLASHINFER 
+[1;36m(EngineCore_DP0 pid=49247)[0;0m INFO 10-16 12:51:26 [cuda.py:377] Using AttentionBackendEnum.FLASHINFER backend.
+SANITY: 17 multiplied by 23 equals 391. To break it down, 17 times 20 is 340, and 17 times 3 is 51; adding these together gives 391.
+SANITY: The three primary colors in the RGB (additive color) model used for electronic displays are Red, Green, and Blue. In the CMYK (subtractive color) model used for printing, the primary colors are Cyan, Magenta, and Yellow. Black is added to the CMYK
+[12:53:12] === fp8_triton: backend=TRITON_ATTN --kv-cache-dtype fp8
+fp8_triton serve failed
+[12:54:07] === fp16_triton: backend=TRITON_ATTN 
+[1;36m(EngineCore_DP0 pid=51118)[0;0m INFO 10-16 12:54:32 [cuda.py:377] Using AttentionBackendEnum.TRITON_ATTN backend.
+SANITY: 17 multiplied by 23 equals 391. To break it down, 17 times 20 is 340, and 17 times 3 is 51; adding these together gives 391.
+SANITY: The three primary colors in the RGB (additive color) model used for electronic displays are Red, Green, and Blue. In the CMYK (subtractive color) model used for printing, the primary colors are Cyan, Magenta, and Yellow. Black is added to the CMYK
+### ctrl2.out
+[12:55:51] === e5m2_triton
+serve failed
+### ctrl3.out
+[12:58:44] === fp8 eager (--enforce-eager)
+SANITY: "11122" appears appears a sequence of digits; it could can be interpreted as a number or read interpreted as a specific value by value by its numerical value by value by its numerical value11222value or by be by by its numerical111222
+[12:59:31] === fp8 nocompile (-O0)
+SANITY: "11122" appears appears a sequence of digits; it could can be interpreted as a number or read interpreted as a specific value by value by its numerical value by value by its numerical value11222value or by be by by its numerical111222
+### triton e4m3 root cause
+ValueError("type fp8e4nv not supported in this architecture. The supported fp8 dtypes are ('fp8e4b15', 'fp8e5')")
+### triton e5m2 root cause
+assert self.kv_cache_dtype in {"fp8", "fp8_e4m3"}
