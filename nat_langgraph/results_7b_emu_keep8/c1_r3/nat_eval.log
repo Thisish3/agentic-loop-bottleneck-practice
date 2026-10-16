@@ -1,0 +1,100 @@
+/root/agentlab/agent/lib/python3.12/site-packages/nat/authentication/credential_validator/bearer_token_validator.py:25: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey
+2026-10-16 21:10:53 - INFO     - nat.plugins.eval.runtime.evaluate:723 - Starting evaluation run with config file: config.yml
+2026-10-16 21:10:53 - INFO     - nat.cli.cli_utils.config_override:105 - Successfully set override for eval.general.max_concurrency with value: 1 with type <class 'int'>)
+2026-10-16 21:10:53 - INFO     - nat.cli.cli_utils.config_override:105 - Successfully set override for eval.general.output_dir with value: results_7b_emu_keep8/c1_r3 with type <class 'str'>)
+2026-10-16 21:10:53 - INFO     - nat.cli.cli_utils.config_override:105 - Successfully set override for workflow.env.VLLM_MODEL with value: Qwen/Qwen2.5-7B-Instruct-AWQ with type <class 'str'>)
+2026-10-16 21:10:53 - INFO     - nat.cli.cli_utils.config_override:211 - 
+
+Configuration after overrides:
+
+eval:
+  general:
+    dataset:
+      _type: json
+      file_path: ./dataset.json
+    max_concurrency: 1
+    output_dir: results_7b_emu_keep8/c1_r3
+    profiler:
+      bottleneck_analysis:
+        enable_nested_stack: true
+      compute_llm_metrics: true
+      concurrency_spike_analysis:
+        enable: true
+        spike_threshold: 4
+      csv_exclude_io_text: true
+      token_uniqueness_forecast: true
+      workflow_runtime_forecast: true
+workflow:
+  _type: langgraph_wrapper
+  description: LangGraph tool-calling agent for LLM inference questions, served by
+    vLLM
+  env:
+    VLLM_BASE_URL: http://127.0.0.1:8000/v1
+    VLLM_MODEL: Qwen/Qwen2.5-7B-Instruct-AWQ
+  graph: ./graph.py:graph
+
+2026-10-16 21:10:55 - INFO     - nat.runtime.session:332 - Shared workflow built (entry_function=None)
+Running workflow:   0%|          | 0/16 [00:00<?, ?it/s]2026-10-16 21:10:56 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:10:57 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:10:59 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:   6%|▋         | 1/16 [00:04<01:04,  4.29s/it]2026-10-16 21:11:00 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:01 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:02 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  12%|█▎        | 2/16 [00:07<00:51,  3.66s/it]2026-10-16 21:11:03 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:05 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:06 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  19%|█▉        | 3/16 [00:11<00:47,  3.63s/it]2026-10-16 21:11:07 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:08 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:10 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  25%|██▌       | 4/16 [00:15<00:46,  3.88s/it]2026-10-16 21:11:11 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:12 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:14 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  31%|███▏      | 5/16 [00:18<00:41,  3.79s/it]2026-10-16 21:11:15 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:17 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:18 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:20 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  38%|███▊      | 6/16 [00:24<00:45,  4.53s/it]2026-10-16 21:11:21 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:22 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:23 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  44%|████▍     | 7/16 [00:28<00:37,  4.21s/it]2026-10-16 21:11:25 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:26 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:31 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:32 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  50%|█████     | 8/16 [00:37<00:45,  5.72s/it]2026-10-16 21:11:33 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:35 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:39 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  56%|█████▋    | 9/16 [00:43<00:41,  5.96s/it]2026-10-16 21:11:41 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:43 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  62%|██████▎   | 10/16 [00:48<00:33,  5.51s/it]2026-10-16 21:11:45 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:47 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  69%|██████▉   | 11/16 [00:52<00:25,  5.12s/it]2026-10-16 21:11:49 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:52 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:55 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:11:56 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  75%|███████▌  | 12/16 [01:01<00:24,  6.11s/it]2026-10-16 21:11:58 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:12:06 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:12:07 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  81%|████████▏ | 13/16 [01:12<00:23,  7.73s/it]2026-10-16 21:12:09 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:12:15 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  88%|████████▊ | 14/16 [01:20<00:15,  7.82s/it]2026-10-16 21:12:17 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:12:26 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow:  94%|█████████▍| 15/16 [01:30<00:08,  8.61s/it]2026-10-16 21:12:28 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-16 21:12:36 - INFO     - httpx:1740 - HTTP Request: POST http://127.0.0.1:8000/v1/chat/completions "HTTP/1.1 200 OK"
+Running workflow: 100%|██████████| 16/16 [01:41<00:00,  9.11s/it]Running workflow: 100%|██████████| 16/16 [01:41<00:00,  6.33s/it]
+2026-10-16 21:12:36 - WARNING  - nat.plugins.eval.runtime.evaluate:606 - All evaluators were empty or invalid.
+2026-10-16 21:12:36 - INFO     - nat.plugins.profiler.profile_runner:168 - Wrote combined data to: results_7b_emu_keep8/c1_r3/all_requests_profiler_traces.json
+2026-10-16 21:12:37 - INFO     - nat.plugins.profiler.profile_runner:187 - Wrote merged standardized DataFrame to results_7b_emu_keep8/c1_r3/standardized_data_all.csv
+2026-10-16 21:12:37 - INFO     - nat.plugins.profiler.profile_runner:269 - Wrote inference optimization results to: results_7b_emu_keep8/c1_r3/inference_optimization.json
+2026-10-16 21:12:40 - INFO     - nat.plugins.profiler.profile_runner:293 - Nested stack analysis complete
+2026-10-16 21:12:40 - INFO     - nat.plugins.profiler.profile_runner:304 - Concurrency spike analysis complete
+2026-10-16 21:12:40 - INFO     - nat.plugins.profiler.profile_runner:333 - Wrote workflow profiling report to: results_7b_emu_keep8/c1_r3/workflow_profiling_report.txt
+2026-10-16 21:12:40 - INFO     - nat.plugins.profiler.profile_runner:340 - Wrote workflow profiling metrics to: results_7b_emu_keep8/c1_r3/workflow_profiling_metrics.json
+
+=== EVALUATION SUMMARY ===
+Workflow Status: COMPLETED (workflow_output.json)
+Total Runtime: 101.25s
+Workflow Runtime (p95): 10.68s
+LLM Latency (p95): 7.26s
+[0m[0m

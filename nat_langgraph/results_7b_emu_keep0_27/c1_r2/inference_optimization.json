@@ -1,0 +1,75 @@
+{
+  "confidence_intervals": {
+    "workflow_run_time_confidence_intervals": {
+      "n": 16,
+      "mean": 4.343204915523529,
+      "ninetieth_interval": [
+        3.7602325282752966,
+        4.9261773027717615
+      ],
+      "ninety_fifth_interval": [
+        3.648599517951167,
+        5.037810313095891
+      ],
+      "ninety_ninth_interval": [
+        3.430294964428425,
+        5.256114866618633
+      ],
+      "p90": 6.771962881088257,
+      "p95": 7.150886118412018,
+      "p99": 7.638104164600372
+    },
+    "llm_latency_confidence_intervals": {
+      "n": 42,
+      "mean": 1.5981352613085793,
+      "ninetieth_interval": [
+        1.3718778757644132,
+        1.8243926468527454
+      ],
+      "ninety_fifth_interval": [
+        1.3285519934261687,
+        1.86771852919099
+      ],
+      "ninety_ninth_interval": [
+        1.2438258235202682,
+        1.9524446990968904
+      ],
+      "p90": 2.3947858095169066,
+      "p95": 3.3327569961547843,
+      "p99": 4.798214647769927
+    },
+    "throughput_estimate_confidence_interval": {
+      "n": 16,
+      "mean": 0.23016485937435002,
+      "ninetieth_interval": [
+        0.13550956095664857,
+        0.3248201577920515
+      ],
+      "ninety_fifth_interval": [
+        0.11738407828091851,
+        0.34294564046778153
+      ],
+      "ninety_ninth_interval": [
+        0.0819386899372686,
+        0.37839102881143144
+      ],
+      "p90": 0,
+      "p95": 0,
+      "p99": 0
+    }
+  },
+  "common_prefixes": null,
+  "token_uniqueness": {
+    "Qwen/Qwen2.5-7B-Instruct-AWQ": {
+      "p90": 77.0,
+      "p95": 78.0,
+      "p99": 79.5
+    }
+  },
+  "workflow_runtimes": {
+    "p90": 6.771962881088257,
+    "p95": 7.150886118412018,
+    "p99": 7.638104164600372
+  },
+  "dynamo_metrics": null
+}

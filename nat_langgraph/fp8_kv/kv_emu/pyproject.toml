@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kv-emu"
+version = "0.1.0"
+description = "vLLM plugin: per-layer fp8 KV cache accuracy emulation"
+
+[tool.setuptools]
+py-modules = ["kv_emu"]
+
+[project.entry-points."vllm.general_plugins"]
+kv_emu = "kv_emu:register"

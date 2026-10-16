@@ -1,0 +1,60 @@
+[20:43:55] === off: KV_EMU=off keep= top=
+vLLM ready after 39s
+[kv_emu] installed pid=611 mode=off keep=[] top=0.0
+[1;36m(EngineCore_DP0 pid=740)[0;0m [kv_emu] installed pid=740 mode=off keep=[] top=0.0
+SANITY: 17 multiplied by 23 equals 391. To break it down, 17 times 20 is 340, and 17 times 3 is 51; adding these together gives 391.
+[20:46:03] c=1 r=1 Total Runtime: 73.87s Workflow Runtime (p95): 8.98s 
+[20:47:23] c=1 r=2 Total Runtime: 71.24s Workflow Runtime (p95): 8.27s 
+[20:48:46] c=1 r=3 Total Runtime: 74.20s Workflow Runtime (p95): 9.28s 
+[20:49:05] c=16 r=1 Total Runtime: 11.06s Workflow Runtime (p95): 10.62s 
+[20:49:24] c=16 r=2 Total Runtime: 10.60s Workflow Runtime (p95): 10.40s 
+[20:49:44] c=16 r=3 Total Runtime: 11.89s Workflow Runtime (p95): 10.82s 
+[20:49:44] === all: KV_EMU=e4m3 keep= top=
+vLLM ready after 36s
+[kv_emu] installed pid=2570 mode=e4m3 keep=[] top=0.0
+[1;36m(EngineCore_DP0 pid=2718)[0;0m [kv_emu] installed pid=2718 mode=e4m3 keep=[] top=0.0
+[1;36m(EngineCore_DP0 pid=2718)[0;0m [kv_emu] layer 0: e4m3 top=0.0
+SANITY: "11122" is a sequence of digits; without additional context or mathematical operation specified,, it's simply read the string of numbers numbers the string of characters.
+[20:52:48] c=1 r=1 Total Runtime: 134.98s Workflow Runtime (p95): 13.16s 
+[20:55:58] c=1 r=2 Total Runtime: 184.30s Workflow Runtime (p95): 12.38s 
+[20:58:40] c=1 r=3 Total Runtime: 156.02s Workflow Runtime (p95): 13.27s 
+[20:59:00] c=16 r=1 Total Runtime: 13.94s Workflow Runtime (p95): 13.93s 
+[20:59:19] c=16 r=2 Total Runtime: 13.24s Workflow Runtime (p95): 13.23s 
+[20:59:41] c=16 r=3 Total Runtime: 15.64s Workflow Runtime (p95): 15.63s 
+[20:59:41] === keep0_27: KV_EMU=e4m3 keep=0,27 top=
+vLLM ready after 37s
+[kv_emu] installed pid=5568 mode=e4m3 keep=[0, 27] top=0.0
+[1;36m(EngineCore_DP0 pid=5709)[0;0m [kv_emu] installed pid=5709 mode=e4m3 keep=[0, 27] top=0.0
+[1;36m(EngineCore_DP0 pid=5709)[0;0m [kv_emu] layer 0: fp16 (kept) top=0.0
+SANITY: 17 multiplied by 23 equals 391. This is calculated by multiplying 17 by 20 (which gives 340) and then adding 17 multiplied by 3 (which gives 51), resulting in 391.
+[21:02:14] c=1 r=1 Total Runtime: 100.90s Workflow Runtime (p95): 13.80s 
+[21:03:32] c=1 r=2 Total Runtime: 69.52s Workflow Runtime (p95): 7.15s 
+[21:05:26] c=1 r=3 Total Runtime: 105.48s Workflow Runtime (p95): 13.94s 
+[21:05:50] c=16 r=1 Total Runtime: 15.04s Workflow Runtime (p95): 14.09s 
+[21:06:15] c=16 r=2 Total Runtime: 16.86s Workflow Runtime (p95): 15.50s 
+[21:06:41] c=16 r=3 Total Runtime: 17.96s Workflow Runtime (p95): 14.24s 
+[21:06:41] === keep8: KV_EMU=e4m3 keep=0,27,17,16,1,15,2,12 top=
+vLLM ready after 39s
+[kv_emu] installed pid=7839 mode=e4m3 keep=[0, 1, 2, 12, 15, 16, 17, 27] top=0.0
+[1;36m(EngineCore_DP0 pid=7984)[0;0m [kv_emu] installed pid=7984 mode=e4m3 keep=[0, 1, 2, 12, 15, 16, 17, 27] top=0.0
+[1;36m(EngineCore_DP0 pid=7984)[0;0m [kv_emu] layer 0: fp16 (kept) top=0.0
+SANITY: 17 multiplied by 23 equals 391. To break it down, 17 times 20 is 340, and 17 times 3 is 51; adding these together gives 391.
+[21:09:19] c=1 r=1 Total Runtime: 103.06s Workflow Runtime (p95): 11.97s 
+[21:10:51] c=1 r=2 Total Runtime: 84.12s Workflow Runtime (p95): 10.28s 
+[21:12:41] c=1 r=3 Total Runtime: 101.25s Workflow Runtime (p95): 10.68s 
+[21:13:06] c=16 r=1 Total Runtime: 16.46s Workflow Runtime (p95): 16.41s 
+[21:13:28] c=16 r=2 Total Runtime: 13.09s Workflow Runtime (p95): 12.46s 
+[21:13:51] c=16 r=3 Total Runtime: 14.70s Workflow Runtime (p95): 12.36s 
+[21:13:51] === top5: KV_EMU=e4m3 keep= top=0.05
+vLLM ready after 34s
+[kv_emu] installed pid=10127 mode=e4m3 keep=[] top=0.05
+[1;36m(EngineCore_DP0 pid=10259)[0;0m [kv_emu] installed pid=10259 mode=e4m3 keep=[] top=0.05
+[1;36m(EngineCore_DP0 pid=10259)[0;0m [kv_emu] layer 0: e4m3 top=0.05
+SANITY: To calculate 17 multiplied by 23, you can use the distributive property: of multiplication over addition, breaking it down to (10*23) + 7*23), which equals 230 + 161, resulting in 391.
+[21:15:21] c=1 r=1 Total Runtime: 43.47s Workflow Runtime (p95): 6.45s 
+[21:16:29] c=1 r=2 Total Runtime: 61.91s Workflow Runtime (p95): 12.05s 
+[21:17:27] c=1 r=3 Total Runtime: 51.74s Workflow Runtime (p95): 7.19s 
+[21:17:40] c=16 r=1 Total Runtime: 6.63s Workflow Runtime (p95): 6.45s 
+[21:18:02] c=16 r=2 Total Runtime: 16.12s Workflow Runtime (p95): 16.11s 
+[21:18:25] c=16 r=3 Total Runtime: 16.02s Workflow Runtime (p95): 8.99s 
+[21:18:25] ALL DONE

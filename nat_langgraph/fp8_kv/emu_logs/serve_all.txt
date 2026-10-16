@@ -1,0 +1,10 @@
+WARNING 10-16 20:49:53 [api_server.py:1045] SECURITY WARNING: Development endpoints are enabled! This should NOT be used in production!
+[kv_emu] installed pid=2570 mode=e4m3 keep=[] top=0.0
+[1;36m(APIServer pid=2570)[0;0m WARNING 10-16 20:49:58 [interface.py:409] Using 'pin_memory=False' as WSL is detected. This may slow down the performance.
+[1;36m(EngineCore_DP0 pid=2718)[0;0m [kv_emu] installed pid=2718 mode=e4m3 keep=[] top=0.0
+[1;36m(EngineCore_DP0 pid=2718)[0;0m WARNING 10-16 20:50:05 [interface.py:409] Using 'pin_memory=False' as WSL is detected. This may slow down the performance.
+[1;36m(EngineCore_DP0 pid=2718)[0;0m [kv_emu] layer 0: e4m3 top=0.0
+[1;36m(EngineCore_DP0 pid=2718)[0;0m INFO 10-16 20:50:18 [kv_cache_utils.py:1229] GPU KV cache size: 23,152 tokens
+[1;36m(EngineCore_DP0 pid=2718)[0;0m INFO 10-16 20:50:18 [kv_cache_utils.py:1234] Maximum concurrency for 3,072 tokens per request: 7.54x
+[1;36m(APIServer pid=2570)[0;0m WARNING 10-16 20:50:20 [model.py:1568] Default sampling parameters have been overridden by the model's Hugging Face generation config recommended from the model creator. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+[rank0]:[W1016 20:59:41.841913152 ProcessGroupNCCL.cpp:1524] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
